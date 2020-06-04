@@ -1,0 +1,8 @@
+rootProject.name='SimpleRouter'
+include ':app'
+include ':app_comp'
+include ':simple_router'
+include ':simple_router_api'
+include ':simple_router_processor'
+include ':baselib'
+include ':simple_router_base'
