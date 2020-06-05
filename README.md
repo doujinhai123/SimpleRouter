@@ -74,7 +74,7 @@ public class HomeActivity extends AppCompatActivity {
 
 调用 `@SimpleParam` 注解指定要解析的参数， 调用 `SRouter.initParams(this)` 以解析参数。
 
-> 该代码可以写在基类中，即使没有参数可解析也没影响。
+> `SRouter.initParams(this)` 可以写在基类中，即使没有参数可解析也没影响。
 
 
 ### 路由监控和拦截
