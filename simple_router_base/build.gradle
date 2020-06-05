@@ -1,5 +1,6 @@
 apply plugin: 'java-library'
 apply plugin: 'maven'
+//apply plugin: 'com.novoda.bintray-release'
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -20,3 +21,13 @@ uploadArchives{ //当前项目可以发布到本地文件夹中
         }
     }
 }
+
+//publish {
+//    userOrg = 'dixonxu'
+//    repoName = 'srouter'
+//    groupId = 'com.dixon.srouter'
+//    artifactId = 'simple_router_base'
+//    publishVersion = '1.0.1'
+//    desc = 'router for small project'
+//    website = 'https://github.com/zhxyComing/SimpleRouter'
+//}

@@ -1,11 +1,21 @@
 apply plugin: 'java-library'
 apply plugin: 'maven'
+//apply plugin: 'com.novoda.bintray-release'
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    api 'com.dixon.simple.router:simple_router_api:1.0.0'
-    implementation 'com.dixon.simple.router:simple_router_base:1.0.0'
     implementation 'com.squareup:javapoet:1.11.1'
+
+    // 引用远程库
+    api 'com.dixon.srouter:simple_router_api:1.0.1'
+    implementation 'com.dixon.srouter:simple_router_base:1.0.1'
+
+    // 引用本地库
+    // api 'com.dixon.simple.router:simple_router_api:1.0.0'
+    // implementation 'com.dixon.simple.router:simple_router_base:1.0.0'
+    // 引用本工程
+    // api project(":simple_router_api")
+    // implementation project(":simple_router_base")
 }
 
 sourceCompatibility = "7"
@@ -23,3 +33,13 @@ uploadArchives{ //当前项目可以发布到本地文件夹中
         }
     }
 }
+
+//publish {
+//    userOrg = 'dixonxu'
+//    repoName = 'srouter'
+//    groupId = 'com.dixon.srouter'
+//    artifactId = 'simple_router_processor'
+//    publishVersion = '1.0.1'
+//    desc = 'router for small project'
+//    website = 'https://github.com/zhxyComing/SimpleRouter'
+//}

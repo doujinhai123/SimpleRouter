@@ -9,7 +9,6 @@ import android.view.View;
 
 import com.dixon.app.comp.Book;
 import com.dixon.baselib.LoginStatue;
-import com.dixon.simple.router.base.core.Constant;
 import com.dixon.simple.router.core.SRouter;
 import com.dixon.simple.router.api.SimpleRouter;
 import com.dixon.simple.router.guide.Interceptor;

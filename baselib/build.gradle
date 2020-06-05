@@ -31,5 +31,8 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    api 'com.dixon.simple.router:simple_router:1.0.0'
+    // 引用远程库
+    api 'com.dixon.srouter:simple_router:1.0.1'
+    // 引用本地库
+    // api 'com.dixon.simple.router:simple_router:1.0.0'
 }

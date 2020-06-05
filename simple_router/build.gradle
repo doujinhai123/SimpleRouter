@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'maven'
+//apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion 29
@@ -32,10 +33,16 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-//    api project(":simple_router_api")
-//    implementation project(":simple_router_base")
-    api 'com.dixon.simple.router:simple_router_api:1.0.0'
-    implementation 'com.dixon.simple.router:simple_router_base:1.0.0'
+    // 引用远程库
+    api 'com.dixon.srouter:simple_router_api:1.0.1'
+    implementation 'com.dixon.srouter:simple_router_base:1.0.1'
+
+    // 引用本地库
+    // api 'com.dixon.simple.router:simple_router_api:1.0.0'
+    // implementation 'com.dixon.simple.router:simple_router_base:1.0.0'
+    // 引用本工程
+    // api project(":simple_router_api")
+    // implementation project(":simple_router_base")
 }
 
 //publish to local directory
@@ -43,10 +50,20 @@ def versionName = "1.0.0"
 group "com.dixon.simple.router"
 version versionName
 
-uploadArchives{ //当前项目可以发布到本地文件夹中
+uploadArchives { //当前项目可以发布到本地文件夹中
     repositories {
         mavenDeployer {
             repository(url: uri('/Users/dixon.xu/repo')) //定义本地maven仓库的地址
         }
     }
 }
+
+//publish {
+//    userOrg = 'dixonxu'
+//    repoName = 'srouter'
+//    groupId = 'com.dixon.srouter'
+//    artifactId = 'simple_router'
+//    publishVersion = '1.0.1'
+//    desc = 'router for small project'
+//    website = 'https://github.com/zhxyComing/SimpleRouter'
+//}
