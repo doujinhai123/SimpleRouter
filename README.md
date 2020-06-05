@@ -24,7 +24,7 @@ public class HomeActivity extends AppCompatActivity {
 
 2、使用 `SRouter` 类进行跳转。
 
-```
+```java
 @SimpleRouter(value = "main_page", interceptor = "")
 public class MainActivity extends AppCompatActivity {
 
