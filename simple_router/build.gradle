@@ -1,6 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'maven'
-//apply plugin: 'com.novoda.bintray-release'
+apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion 29
@@ -58,12 +58,12 @@ uploadArchives { //当前项目可以发布到本地文件夹中
     }
 }
 
-//publish {
-//    userOrg = 'dixonxu'
-//    repoName = 'srouter'
-//    groupId = 'com.dixon.srouter'
-//    artifactId = 'simple_router'
-//    publishVersion = '1.0.1'
-//    desc = 'router for small project'
-//    website = 'https://github.com/zhxyComing/SimpleRouter'
-//}
+publish {
+    userOrg = 'dixonxu'
+    repoName = 'srouter'
+    groupId = 'com.dixon.srouter'
+    artifactId = 'simple_router'
+    publishVersion = '1.0.2'
+    desc = 'router for small project'
+    website = 'https://github.com/zhxyComing/SimpleRouter'
+}
