@@ -1,6 +1,7 @@
 package com.dixon.simple.router.guide.execute;
 
 import android.app.Activity;
+import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -76,6 +77,10 @@ public class RouterExecutor implements Executor, RouterCallback {
         Intent intent = new Intent(context, goClass);
         if (bundle != null) {
             intent.putExtra(Constant.ROUTER_BUNDLE_NAME, bundle);
+        }
+        // application需要设置该属性
+        if (context instanceof Application) {
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         }
         if (requestCode != REQUEST_CODE_NONE && context instanceof Activity) {
             ((Activity) context).startActivityForResult(intent, requestCode);
